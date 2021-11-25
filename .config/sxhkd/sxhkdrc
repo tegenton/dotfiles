@@ -1,0 +1,23 @@
+# Terminal
+super + Return
+    st
+super + shift + Return
+    st # floating?
+
+# dmenu launcher
+super + d
+    dmenu_run
+
+# refresh sxhkd
+super + shift + r
+    pkill -USR1 sxhkd
+
+# MPD commands
+super + p
+    mpc -q toggle
+
+super + XK_bracket{left,right}
+    mpc -q seek {-,+}10
+
+super + shift + XK_bracket{left,right}
+    mpc -q seek {-,+}60
