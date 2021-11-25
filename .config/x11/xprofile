@@ -1,0 +1,13 @@
+#!/bin/sh
+
+#setbg &			# set the background with the `setbg` script
+xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources &	# Use Xresources colors
+mpd &            # Music Player Daemon
+emacs --daemon & # Emacs server
+#remaps &		# run the remaps script, switching caps/esc and more; check it for more info
+#xcompmgr &		# xcompmgr for transparency
+#dunst &			# dunst for notifications
+#xset r rate 300 50 &	# Speed xrate up
+#unclutter &		# Remove mouse when idle
+#redshift -l 40:-75 &		# Blue light filter
+sxhkd &          # Keybind manager
