@@ -16,8 +16,8 @@ super + shift + r
 super + p
     mpc -q toggle
 
-super + XK_bracket{left,right}
+super + bracket{left,right}
     mpc -q seek {-,+}10
 
-super + shift + XK_bracket{left,right}
+super + shift + bracket{left,right}
     mpc -q seek {-,+}60
