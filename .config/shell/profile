@@ -13,6 +13,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_MUSIC_DIR="$HOME/music"
 
 # Config file directories
+export INPUTRC="${XDG_CONFIG_HOME:-$HOME/.config}/shell/inputrc"
 export XINITRC="${XDG_CONFIG_HOME:-$HOME/.config}/x11/xinitrc"
 export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
 
