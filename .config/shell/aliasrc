@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# 'vim <file>' or 'emacs <file>' should use system editor
+alias vim="$EDITOR" \
+      emacs="$EDITOR"
+
+# Use $XINITRC variable if file exists.
+[ -f "$XINITRC" ] && alias startx="startx $XINITRC"
+
+# verbose - list files to change; interactive - warn before large change
+alias cp="cp -iv" \
+      mv="mv -iv" \
+      rm="rm -vI" \
+      mkdir="mkdir -pv"
+
+# commonly used args
+alias bc="bc -ql" \
+      ffmpeg="ffmpeg -hide_banner"
+
+# use colors
+alias ls="ls -hN --color=auto --group-directories-first" \
+      grep="grep --color=auto"
