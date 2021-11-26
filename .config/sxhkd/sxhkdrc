@@ -1,8 +1,8 @@
 # Terminal
 super + Return
-    st
+    $TERMINAL
 super + shift + Return
-    st # floating?
+    $TERMINAL # floating?
 
 # dmenu launcher
 super + d
@@ -21,3 +21,10 @@ super + bracket{left,right}
 
 super + shift + bracket{left,right}
     mpc -q seek {-,+}60
+
+super + {comma,period}
+    mpc {prev,next}
+
+# ncmpcpp
+super + m
+    $TERMINAL -e ncmpcpp
