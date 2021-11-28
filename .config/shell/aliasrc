@@ -4,6 +4,9 @@
 alias vim="$EDITOR" \
       emacs="$EDITOR"
 
+# nsxiv - because why would we keep using that name?
+alias sxiv=nsxiv
+
 # Use $XINITRC variable if file exists.
 [ -f "$XINITRC" ] && alias startx="startx $XINITRC"
 

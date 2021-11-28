@@ -5,6 +5,7 @@
 # Simple environment variables
 export EDITOR="emacsclient -c -a 'emacs'"
 export TERMINAL="st"
+export BROWSER="firefox"
 
 # XDG default dirs
 export XDG_CONFIG_HOME="$HOME/repos/dotfiles/.config"
@@ -19,3 +20,6 @@ export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
 
 # Program settings
 export LESSHISTFILE="-"
+
+# Add `~/.local/bin` to $PATH
+export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}"
