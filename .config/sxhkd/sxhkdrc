@@ -8,6 +8,10 @@ super + shift + Return
 super + d
     dmenu_run
 
+# lock
+super + BackSpace
+    slock
+
 # refresh sxhkd
 super + shift + r
     pkill -USR1 sxhkd
@@ -28,3 +32,13 @@ super + {comma,period}
 # ncmpcpp
 super + m
     $TERMINAL -e ncmpcpp
+
+# dwmc
+super + {_,shift +} q
+    dwmc {killclient,quit}
+
+super + {_,ctrl +}{_,shift +} {1-9}
+    dwmc {_,toggle}{viewex,tagex} {0-8}
+
+super + {_,shift +} {j,k}
+    dwmc {focus,move}stack {+,-}1
