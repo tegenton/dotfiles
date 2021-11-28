@@ -29,6 +29,10 @@ super + shift + bracket{left,right}
 super + {comma,period}
     mpc {prev,next}
 
+# volume
+super + {minus,equal}
+    amixer -q sset Master 5{-,+}
+
 # ncmpcpp
 super + m
     $TERMINAL -e ncmpcpp
