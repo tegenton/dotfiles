@@ -1,0 +1,66 @@
+#+TITLE: Emacs Config
+#+AUTHOR: tegenton
+
+* Package Management
+  ** Repositories
+
+  #+begin_src emacs-lisp
+    (require 'package)
+    (add-to-list 'package-archives
+		 '("melpa" . "https://melpa.org/packages/"))
+    (package-refresh-contents)
+    (package-initialize)
+  #+end_src
+
+  ** Base Packages
+  *** use-package
+
+  #+begin_src emacs-lisp
+    (unless (package-installed-p 'use-package)
+      (package-install 'use-package))
+    (setq use-package-always-ensure t)
+  #+end_src
+  *** Evil
+  #+begin_src emacs-lisp
+    (use-package evil
+      :init
+      (setq evil-want-keybinding nil)
+      (setq evil-vsplit-window-right t)
+      (setq evil-split-window-below t)
+      (evil-mode))
+    (use-package evil-collection
+      :after evil
+      :config
+      (evil-collection-init))
+  #+end_src
+
+  * Appearance
+  ** Font
+  #+begin_src emacs-lisp
+    (set-face-attribute 'default nil
+			:font "Fira Code 10"
+			:weight 'medium)
+    (add-to-list 'default-frame-alist '(font . "Fira Code 10"))
+  #+end_src
+
+  ** Menus
+  Who needs them?
+  #+begin_src emacs-lisp
+    (menu-bar-mode -1)
+    (tool-bar-mode -1)
+    (scroll-bar-mode -1)
+  #+end_src
+
+  ** Modeline
+  TODO: customize
+  #+begin_src emacs-lisp
+    (use-package doom-modeline)
+    (doom-modeline-mode 1)
+  #+end_src
+
+  * Settings
+  ** Backups
+  Disable <file>~ temp files
+  #+begin_src emacs-lisp
+    (setq make-backup-files nil)
+  #+end_src
