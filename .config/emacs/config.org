@@ -42,6 +42,25 @@
 			:weight 'medium)
     (add-to-list 'default-frame-alist '(font . "Fira Code 10"))
   #+end_src
+  ** Dashboard
+  #+begin_src emacs-lisp
+    (use-package dashboard
+      :init
+      (setq dashboard-set-heading-icons t)
+      (setq dashboard-set-file-icons t)
+      (setq dashboard-banner-logo-title "TODO: dashboard config")
+      (setq dashboard-startup-banner 'logo)
+      (setq dashboard-center-content t)
+      (setq dashboard-items '(;;(recents . 10)
+			      ;;(agenda . 5)
+			      (bookmarks . 5)
+			      ;;(projects . 5)
+			      (registers . 5)))
+      :config
+      (dashboard-setup-startup-hook)
+      (dashboard-modify-heading-icons '((recents . "file-text")
+					(bookmarsk . "book"))))
+  #+end_src
 
   ** Menus
   Who needs them?
