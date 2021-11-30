@@ -60,6 +60,7 @@
       (dashboard-setup-startup-hook)
       (dashboard-modify-heading-icons '((recents . "file-text")
 					(bookmarsk . "book"))))
+    (setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
   #+end_src
 
   ** Menus
