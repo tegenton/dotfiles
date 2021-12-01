@@ -1,0 +1,15 @@
+--- a/startx.cpp
++++ b/startx.cpp
+@@ -47,10 +47,10 @@ XCOMM so export the new PATH just in case the user changes the shell
+ export PATH
+ #endif
+ 
+-userclientrc=$HOME/.xinitrc
++userclientrc="${XINITRC:-$HOME/.xinitrc}"
+ sysclientrc=XINITDIR/xinitrc
+ 
+-userserverrc=$HOME/.xserverrc
++userserverrc="${XSERVERRC:-$HOME/.xserverrc}"
+ sysserverrc=XINITDIR/xserverrc
+ defaultclient=XTERM
+ defaultserver=XSERVER

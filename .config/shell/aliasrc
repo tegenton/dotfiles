@@ -7,9 +7,6 @@ alias vim="$EDITOR" \
 # nsxiv - because why would we keep using that name?
 alias sxiv=nsxiv
 
-# Use $XINITRC variable if file exists.
-[ -f "$XINITRC" ] && alias startx="startx $XINITRC"
-
 # verbose - list files to change; interactive - warn before large change
 alias cp="cp -iv" \
       mv="mv -iv" \
