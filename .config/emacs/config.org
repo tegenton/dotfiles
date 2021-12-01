@@ -8,8 +8,22 @@
     (require 'package)
     (add-to-list 'package-archives
 		 '("melpa" . "https://melpa.org/packages/"))
-    (package-refresh-contents)
+    (unless package-archive-contents
+      (package-refresh-contents))
     (package-initialize)
+  #+end_src
+
+  ** Auto Update
+  
+  #+begin_src emacs-lisp
+    (use-package auto-package-update
+      :custom
+      (auto-package-update-interval 7)
+      (auto-package-update-prompt-before-update t)
+      (auto-package-update-hide-results t)
+      :config
+      (auto-package-update-maybe)
+      (auto-package-update-at-time "09:00"))
   #+end_src
 
   ** Base Packages
@@ -34,7 +48,7 @@
       (evil-collection-init))
   #+end_src
 
-  * Appearance
+* Appearance
   ** Font
   #+begin_src emacs-lisp
     (set-face-attribute 'default nil
