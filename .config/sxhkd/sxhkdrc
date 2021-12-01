@@ -46,3 +46,6 @@ super + {_,ctrl +}{_,shift +} {1-9}
 
 super + {_,shift +} {j,k}
     dwmc {focus,move}stack {+,-}1
+
+super + {_,shift +} {Left,Right}
+    dwmc {focus,tag}mon {+,-}1
