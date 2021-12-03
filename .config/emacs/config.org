@@ -2,7 +2,7 @@
 #+AUTHOR: tegenton
 
 * Package Management
-  ** Repositories
+** Repositories
 
   #+begin_src emacs-lisp
     (require 'package)
@@ -12,15 +12,15 @@
     (package-initialize)
   #+end_src
 
-  ** Base Packages
-  *** use-package
+** Base Packages
+*** use-package
 
   #+begin_src emacs-lisp
     (unless (package-installed-p 'use-package)
       (package-install 'use-package))
     (setq use-package-always-ensure t)
   #+end_src
-  *** Evil
+*** Evil
   #+begin_src emacs-lisp
     (use-package evil
       :init
@@ -34,15 +34,15 @@
       (evil-collection-init))
   #+end_src
 
-  * Appearance
-  ** Font
+* Appearance
+** Font
   #+begin_src emacs-lisp
     (set-face-attribute 'default nil
 			:font "Fira Code 10"
 			:weight 'medium)
     (add-to-list 'default-frame-alist '(font . "Fira Code 10"))
   #+end_src
-  ** Dashboard
+** Dashboard
   #+begin_src emacs-lisp
     (use-package dashboard
       :init
@@ -63,7 +63,7 @@
     (setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
   #+end_src
 
-  ** Menus
+** Menus
   Who needs them?
   #+begin_src emacs-lisp
     (menu-bar-mode -1)
@@ -71,15 +71,15 @@
     (scroll-bar-mode -1)
   #+end_src
 
-  ** Modeline
+** Modeline
   TODO: customize
   #+begin_src emacs-lisp
     (use-package doom-modeline)
     (doom-modeline-mode 1)
   #+end_src
 
-  * Settings
-  ** Backups
+* Settings
+** Backups
   Disable <file>~ temp files
   #+begin_src emacs-lisp
     (setq make-backup-files nil)
