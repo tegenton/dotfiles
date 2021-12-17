@@ -9,8 +9,8 @@ super + d
     dmenu_run
 
 # lock
-super + BackSpace
-    slock
+super + {_, shift +} BackSpace
+    {slock, sysact}
 
 # refresh sxhkd
 super + shift + r
@@ -48,4 +48,4 @@ super + {_,shift +} {j,k}
     dwmc {focus,move}stack {+,-}1
 
 super + {_,shift +} {Left,Right}
-    dwmc {focus,tag}mon {+,-}1
+    dwmc {focus,tag}mon {+,-}
