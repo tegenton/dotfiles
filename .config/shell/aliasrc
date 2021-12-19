@@ -4,6 +4,9 @@
 alias vim="$EDITOR" \
       emacs="$EDITOR"
 
+# doas over sudo
+alias sudo=doas
+
 # nsxiv - because why would we keep using that name?
 alias sxiv=nsxiv
 
